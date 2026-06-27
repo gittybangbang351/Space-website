@@ -666,22 +666,89 @@
     .footer-social { display: flex; gap: 18px; }
     .footer-social a { font-size: 0.8rem; color: var(--text-muted); transition: color 0.15s; }
     .footer-social a:hover { color: var(--cream); }
+
+    /* ===== Round 3 — mobile portrait ===== */
+    @media (max-width: 600px) {
+      .announce-sep { display: none; }
+      .announce-link { display: block; margin-top: 2px; }
+    }
+    .nav-dropdown {
+      display: none; position: absolute; top: 58px; left: 20px;
+      background: #fff; border: 1px solid var(--border); border-radius: 14px;
+      padding: 8px; min-width: 190px; z-index: 300;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    .nav-dropdown a { display: block; padding: 11px 14px; font-size: 0.95rem; font-weight: 600; color: var(--text-soft); border-radius: 9px; }
+    .nav-dropdown a:hover { background: var(--cream); color: var(--text); }
+    @media (max-width: 700px) {
+      .nav-inner { position: relative; }
+      .nav-logo { cursor: pointer; }
+      .nav-dropdown.open { display: block; }
+    }
+    @media (max-width: 600px) {
+      .tab-row { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+      .tab-row::-webkit-scrollbar { display: none; }
+      .tab { flex: 0 0 auto; }
+    }
+    @media (max-width: 720px) {
+      .hiw-scroll { align-items: flex-start; }
+      .hiw-card-copy { display: contents; }
+      .hiw-copy-head { order: 1; padding: 26px 28px 0; }
+      .hiw-card-visual { order: 2; padding: 6px 24px 22px; }
+      .hiw-copy-body { order: 3; display: flex; flex-direction: column; padding: 6px 28px 28px; }
+      .hiw-phone { max-width: 72%; max-height: 300px; }
+      .connection-collage { height: 320px; }
+      .hiw-body-stack { margin-bottom: 8px; }
+      .hiw-body-stack p { font-size: 0.9rem; line-height: 1.5; }
+      .hiw-sub { font-size: 0.82rem; margin-bottom: 14px; }
+      .hiw-cta { padding: 11px 24px; font-size: 0.88rem; }
+      .hiw-icons-row { margin-bottom: 16px; gap: 16px; }
+    }
+    .quote-dots { display: none; }
+    @media (max-width: 680px) {
+      .quote-dots { display: flex; justify-content: center; gap: 8px; padding: 18px 0 0; }
+      .qdot { width: 8px; height: 8px; border-radius: 50%; background: rgba(61,54,51,0.18); cursor: pointer; transition: all 0.2s; }
+      .qdot.on { background: var(--text); width: 22px; border-radius: 4px; }
+    }
+    @media (max-width: 600px) {
+      .cta-phone-main { order: 1; }
+      .cta-screens .cta-phone-side:first-child { order: 3; margin-left: -44px; margin-right: 0; }
+      .cta-screens .cta-phone-side:last-child { order: 0; margin-right: -44px; margin-left: 0; }
+    }
+    /* ===== Round 3 — landscape phones ===== */
+    @media (orientation: landscape) and (max-height: 600px) {
+      .hcard { min-height: 300px; }
+      .hcard-phone { height: 250px; bottom: -28px; }
+      .hiw-phone { filter: drop-shadow(0 6px 16px rgba(0,0,0,0.14)); }
+      .quotes-grid { display: flex; grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .quotes-grid::-webkit-scrollbar { display: none; }
+      .qcard { flex: 0 0 48%; scroll-snap-align: start; }
+      .cta-phone-main { order: 1; }
+      .cta-screens .cta-phone-side:first-child { order: 3; margin-left: -30px; }
+      .cta-screens .cta-phone-side:last-child { order: 0; margin-right: -30px; }
+    }
   </style>
 </head>
 <body>
 
   <!-- Announce -->
   <div class="announce">
-    Space is free. No app store needed. &nbsp;·&nbsp; <a href="#download">Add it to your home screen →</a>
+    Space is free. No app store needed.<span class="announce-sep">&nbsp;·&nbsp;</span><a class="announce-link" href="#download">Add it to your home screen →</a>
   </div>
 
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="#">
+      <a class="nav-logo" id="navLogo" href="#" aria-haspopup="true" aria-expanded="false">
         <div class="nav-icon"><img src="https://raw.githubusercontent.com/gittybangbang351/Space-website/main/SPACE_Icon_v1.png" alt="Space" /></div>
         Space
       </a>
+      <div class="nav-dropdown" id="navDropdown">
+        <a href="#how-it-works">How it works</a>
+        <a href="#story">About</a>
+        <a href="#support">Support</a>
+        <a href="#faq">FAQ</a>
+      </div>
       <ul class="nav-links">
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#story">About</a></li>
@@ -807,14 +874,18 @@
           <img src="https://raw.githubusercontent.com/gittybangbang351/Space-website/main/My%20Circle.png" alt="My Circle" class="hiw-phone" />
         </div>
         <div class="hiw-card-copy">
+          <div class="hiw-copy-head">
           <div class="hiw-step">Step 1</div>
           <h3>Your people, not the algorithm.</h3>
+          </div>
+          <div class="hiw-copy-body">
           <div class="hiw-body-stack">
             <p>Space is built to help nurture your meaningful relationships.</p>
             <p>Add the people who matter. That's your circle.</p>
           </div>
           <p class="hiw-sub">No feed. No followers. Small by design.</p>
           <a class="hiw-cta" href="https://app.spaceapp.me" target="_blank" rel="noopener">Build your circle</a>
+          </div>
         </div>
       </div>
 
@@ -824,8 +895,11 @@
           <img src="https://raw.githubusercontent.com/gittybangbang351/Space-website/main/Space%20On%20(activated%20state).png" alt="Space activated" class="hiw-phone" />
         </div>
         <div class="hiw-card-copy">
+          <div class="hiw-copy-head">
           <div class="hiw-step">Step 2</div>
           <h3>When you have the energy for connection.</h3>
+          </div>
+          <div class="hiw-copy-body">
           <div class="hiw-body-stack">
             <p>Turn on Space. One tap. Your circle gets a soft notification.</p>
             <p>No scheduling. No coordinating. Just a signal that now is good.</p>
@@ -852,6 +926,7 @@
             </div>
           </div>
           <a class="hiw-cta" href="https://app.spaceapp.me" target="_blank" rel="noopener">Share your space</a>
+          </div>
         </div>
       </div>
 
@@ -869,14 +944,18 @@
           </div>
         </div>
         <div class="hiw-card-copy">
+          <div class="hiw-copy-head">
           <div class="hiw-step">Step 3</div>
           <h3>Visibility for connection.</h3>
+          </div>
+          <div class="hiw-copy-body">
           <div class="hiw-body-stack">
             <p>Take the guesswork out of coordinating availability.</p>
             <p>Send and receive space notifications.</p>
           </div>
           <p class="hiw-sub">No pressure. No obligation.</p>
           <a class="hiw-cta" href="https://app.spaceapp.me" target="_blank" rel="noopener">Try it now</a>
+          </div>
         </div>
       </div>
 
@@ -891,8 +970,11 @@
           </div>
         </div>
         <div class="hiw-card-copy">
+          <div class="hiw-copy-head">
           <div class="hiw-step">Step 4</div>
           <h3>Connection happens outside the app.</h3>
+          </div>
+          <div class="hiw-copy-body">
           <div class="hiw-body-stack">
             <p>Space is the signal, not the destination.</p>
             <p>A call, a video chat, a walk together.</p>
@@ -900,6 +982,7 @@
           </div>
           <p class="hiw-sub">Make the connection.</p>
           <a class="hiw-cta" href="https://app.spaceapp.me" target="_blank" rel="noopener">Get Space</a>
+          </div>
         </div>
       </div>
 
@@ -919,7 +1002,7 @@
     <div class="container">
       <h2 class="story-h2">How Space helps bridge the gap</h2>
       <p class="story-sub">The problem isn't care. It's coordination.</p>
-      <div class="quotes-grid">
+      <div class="quotes-grid" id="quotesGrid">
         <div class="qcard">
           <span class="qmark">"</span>
           <p class="qtext">I finally reached out after months of letting time pass. Space made it easy. No awkward 'hey it's been forever' message required.</p>
@@ -945,6 +1028,7 @@
           <div class="qcontext">on managing social energy</div>
         </div>
       </div>
+      <div class="quote-dots" id="quoteDots"></div>
     </div>
   </section>
 
@@ -1164,6 +1248,46 @@
         ticking = true;
       }
     }, { passive: true });
+
+    // ─── Nav logo dropdown (mobile) ───
+    const navLogo = document.getElementById('navLogo');
+    const navDropdown = document.getElementById('navDropdown');
+    if (navLogo && navDropdown) {
+      const mqNav = window.matchMedia('(max-width: 700px)');
+      navLogo.addEventListener('click', (e) => {
+        if (mqNav.matches) {
+          e.preventDefault();
+          const open = navDropdown.classList.toggle('open');
+          navLogo.setAttribute('aria-expanded', open);
+        }
+      });
+      navDropdown.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navDropdown.classList.remove('open')));
+      document.addEventListener('click', (e) => {
+        if (!navLogo.contains(e.target) && !navDropdown.contains(e.target)) navDropdown.classList.remove('open');
+      });
+    }
+
+    // ─── Testimonials dots ───
+    const qGrid = document.getElementById('quotesGrid');
+    const qDots = document.getElementById('quoteDots');
+    if (qGrid && qDots) {
+      const qcards = qGrid.querySelectorAll('.qcard');
+      qcards.forEach((_, i) => {
+        const d = document.createElement('span');
+        d.className = 'qdot' + (i === 0 ? ' on' : '');
+        d.addEventListener('click', () => qGrid.scrollTo({ left: i * (qcards[0].offsetWidth + 14), behavior: 'smooth' }));
+        qDots.appendChild(d);
+      });
+      let qt;
+      qGrid.addEventListener('scroll', () => {
+        clearTimeout(qt);
+        qt = setTimeout(() => {
+          const w = qcards[0].offsetWidth + 14;
+          const idx = Math.round(qGrid.scrollLeft / w);
+          qDots.querySelectorAll('.qdot').forEach((d, i) => d.classList.toggle('on', i === idx));
+        }, 60);
+      }, { passive: true });
+    }
   </script>
 
 </body>
