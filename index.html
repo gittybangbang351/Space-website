@@ -632,43 +632,6 @@
     .footer-social { display: flex; gap: 18px; }
     .footer-social a { font-size: 0.8rem; color: var(--text-muted); transition: color 0.15s; }
     .footer-social a:hover { color: var(--cream); }
-
-    /* ─── Mobile fixes (≤ 480px) — desktop untouched ─── */
-    @media (max-width: 480px) {
-
-      /* 1. Hero H1 — allow wrapping */
-      h1 { white-space: normal; }
-
-      /* 2. Hero card body text — allow wrapping */
-      .hcard-body-group p { white-space: normal; }
-
-      /* 3. CTA section — hide side phones, shrink main phone */
-      .cta-phone-side { display: none; }
-      .phone-img-lg { height: 260px; }
-      .cta-big-btn { padding: 18px 36px; }
-
-      /* 4. Support + footer nowrap fixes */
-      .support-p2 { white-space: normal; }
-      .fsup-left p { white-space: normal; }
-
-      /* 5. Hero cards — fully stack on small screens */
-      .hcard { flex-direction: column; min-height: auto; }
-      .hcard-visual { width: 100%; height: 200px; overflow: hidden; }
-      .hcard-phone { height: 240px; bottom: -20px; }
-      .hcard-text { padding: 28px 24px 24px; }
-      .hcard-notif-wrap { display: none; }
-
-      /* 6. General padding tightening */
-      #hero { padding: 40px 16px 40px; }
-      .hero-checks { gap: 14px; }
-      #stats { padding: 64px 20px; }
-      #faq { padding: 56px 20px; }
-      #story { padding: 56px 20px; }
-      .cta-block { padding: 56px 20px 0; }
-      .footer-signup { flex-direction: column; gap: 20px; padding: 36px 20px; }
-      .fsup-form { flex-direction: column; max-width: 100%; }
-      .fsup-form input, .fsup-form button { width: 100%; border-radius: 14px; }
-    }
   </style>
 </head>
 <body>
