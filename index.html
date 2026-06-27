@@ -131,6 +131,13 @@
     .chk { width: 18px; height: 18px; border-radius: 50%; background: var(--amber); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
     .chk svg { width: 10px; height: 10px; stroke: white; stroke-width: 2.5; fill: none; }
 
+    @media (max-width: 600px) {
+      .hero-h1 h1 { white-space: normal; }
+      .hero-h1 .cycle-wrap { display: block; }
+      .hero-checks { gap: 14px 18px; margin-bottom: 28px; }
+      .hero-checks li:nth-child(2) { order: 3; }
+    }
+
     /* ─── Hero 2-col cards ─── */
     .hero-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     @media (max-width: 720px) { .hero-cards { grid-template-columns: 1fr; } }
@@ -234,7 +241,7 @@
       .hcard-text { padding: 32px 28px 8px; }
       .hcard-body-group p { white-space: normal; }
       .hcard-visual { width: 100%; height: 300px; }
-      .hcard-phone { bottom: -40px; height: 360px; }
+      .hcard-phone { bottom: -80px; height: 360px; }
       .hcard-notif-wrap { display: none; }
     }
 
@@ -295,6 +302,7 @@
       .hiw-card {
         width: calc(100% - 40px);
         flex-direction: column;
+        height: auto;
         min-height: auto;
       }
     }
@@ -315,7 +323,9 @@
       overflow: hidden;
     }
     @media (max-width: 720px) {
-      .hiw-card-visual { width: 100%; padding: 32px 32px 0; justify-content: center; }
+      .hiw-card-visual { width: 100%; padding: 8px 24px 28px; justify-content: center; order: 2; }
+      .hiw-phone { height: auto; width: auto; max-width: 78%; max-height: 360px; }
+      .connection-collage { height: 360px; padding: 0; }
     }
 
     .hiw-card-copy {
@@ -325,7 +335,7 @@
       flex-direction: column;
       justify-content: center;
     }
-    @media (max-width: 720px) { .hiw-card-copy { padding: 28px 28px 36px; } }
+    @media (max-width: 720px) { .hiw-card-copy { padding: 30px 28px 14px; order: 1; } }
 
     .hiw-step {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
@@ -467,7 +477,16 @@
       gap: 14px; max-width: var(--max); margin: 0 auto;
     }
     @media (max-width: 900px) { .quotes-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 680px) { .quotes-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 680px) {
+      .quotes-grid {
+        display: flex; grid-template-columns: none;
+        overflow-x: auto; scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; scrollbar-width: none;
+        padding-bottom: 4px;
+      }
+      .quotes-grid::-webkit-scrollbar { display: none; }
+      .qcard { flex: 0 0 82%; scroll-snap-align: start; }
+    }
 
     .qcard { background: var(--cream); border-radius: 22px; padding: 32px 28px; }
     .qcard.featured { background: var(--cream); border: none; }
@@ -588,6 +607,15 @@
     }
     .phone-img-lg { height: 440px; }
     .phone-img-sm { height: 300px; }
+    @media (max-width: 600px) {
+      .cta-screens { gap: 0; }
+      .cta-phone-main { position: relative; z-index: 2; }
+      .cta-phone-side { z-index: 1; }
+      .phone-img-lg { height: 330px; }
+      .phone-img-sm { height: 220px; }
+      .cta-screens .cta-phone-side:first-child { margin-right: -44px; }
+      .cta-screens .cta-phone-side:last-child { margin-left: -44px; }
+    }
 
     /* ─── Support ─── */
     #support { padding: 80px 28px; background: var(--cream); position: relative; overflow: hidden; }
@@ -601,7 +629,7 @@
     .support-inner h2 { margin-bottom: 20px; }
     .support-p1 { font-size: 1.05rem; margin-bottom: 32px; }
     .support-p2 { font-size: 1.02rem; margin-top: 32px; white-space: nowrap; }
-    @media (max-width: 600px) { .support-p2 { white-space: normal; } }
+    @media (max-width: 600px) { .support-p2 { white-space: normal; } .support-p1, .support-p2 { text-wrap: balance; } .support-p2 .p2b { display: block; } }
     .support-btn {
       display: inline-block; background: var(--text); color: white;
       padding: 16px 40px; border-radius: 100px;
@@ -1015,7 +1043,7 @@
       <h2>Help keep it going.</h2>
       <p class="support-p1">In a time when most apps compete for attention,<br>Space is built on the belief that real connection matters.</p>
       <a class="support-btn" href="https://app.spaceapp.me/support" target="_blank" rel="noopener">Contribute to Space</a>
-      <p class="support-p2">Space is independently built and ad-free. If it's useful to you, consider supporting it.</p>
+      <p class="support-p2">Space is independently built and ad-free. <span class="p2b">If it's useful to you, consider supporting it.</span></p>
     </div>
   </section>
 
