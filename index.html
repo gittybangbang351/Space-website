@@ -691,7 +691,7 @@
       .tab { flex: 0 0 auto; }
     }
     @media (max-width: 720px) {
-      .hiw-scroll { align-items: flex-start; }
+      .hiw-scroll { align-items: stretch; }
       .hiw-card-copy { display: contents; }
       .hiw-copy-head { order: 1; padding: 26px 28px 0; }
       .hiw-card-visual { order: 2; padding: 6px 24px 22px; }
@@ -726,6 +726,16 @@
       .cta-phone-main { order: 1; }
       .cta-screens .cta-phone-side:first-child { order: 3; margin-left: -30px; }
       .cta-screens .cta-phone-side:last-child { order: 0; margin-right: -30px; }
+    }
+
+    /* ===== Round 4 — how it works ===== */
+    .hiw-kicker { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -0.01em; }
+    .amber-card .hiw-kicker { color: #fff; }
+    .dark-card .hiw-kicker { color: var(--cream); }
+    .tab-row { position: relative; }
+    @media (max-width: 720px) {
+      .amber-card .hiw-card-visual { height: 240px; overflow: hidden; align-items: flex-start; padding: 6px 24px 0; }
+      .amber-card .hiw-phone { height: 360px; max-height: none; }
     }
   </style>
 </head>
@@ -876,6 +886,7 @@
         <div class="hiw-card-copy">
           <div class="hiw-copy-head">
           <div class="hiw-step">Step 1</div>
+          <div class="hiw-kicker">Build your circle</div>
           <h3>Your people, not the algorithm.</h3>
           </div>
           <div class="hiw-copy-body">
@@ -897,6 +908,7 @@
         <div class="hiw-card-copy">
           <div class="hiw-copy-head">
           <div class="hiw-step">Step 2</div>
+          <div class="hiw-kicker">Turn on Space</div>
           <h3>When you have the energy for connection.</h3>
           </div>
           <div class="hiw-copy-body">
@@ -946,6 +958,7 @@
         <div class="hiw-card-copy">
           <div class="hiw-copy-head">
           <div class="hiw-step">Step 3</div>
+          <div class="hiw-kicker">Get Notifications</div>
           <h3>Visibility for connection.</h3>
           </div>
           <div class="hiw-copy-body">
@@ -972,6 +985,7 @@
         <div class="hiw-card-copy">
           <div class="hiw-copy-head">
           <div class="hiw-step">Step 4</div>
+          <div class="hiw-kicker">Make the connection</div>
           <h3>Connection happens outside the app.</h3>
           </div>
           <div class="hiw-copy-body">
@@ -1203,6 +1217,11 @@
     function setActive(idx) {
       tabs.forEach((t, i) => t.classList.toggle('on', i === idx));
       dots.forEach((d, i) => d.classList.toggle('on', i === idx));
+      const at = tabs[idx];
+      const tr = at ? at.parentElement : null;
+      if (at && tr && tr.scrollWidth > tr.clientWidth) {
+        tr.scrollTo({ left: at.offsetLeft - (tr.clientWidth - at.offsetWidth) / 2, behavior: 'smooth' });
+      }
     }
 
     tabs.forEach(tab => {
