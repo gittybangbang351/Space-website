@@ -213,7 +213,7 @@
       .hero-orb-wrap { width: clamp(200px, 30vw, 340px); height: clamp(200px, 30vw, 340px); }
     }
     @media (max-width: 640px) {
-      #hero { height: auto; min-height: 100svh; align-items: flex-start; padding-top: 80px; overflow: hidden; }
+      #hero { height: auto; min-height: 100dvh; align-items: flex-start; padding-top: 80px; padding-bottom: 60px; overflow: hidden; }
       .hero-inner { grid-template-columns: 1fr; text-align: center; padding: 0 28px; gap: 20px; }
       .hero-sub { max-width: 100%; margin-left: auto; margin-right: auto; }
       .hero-ctas { justify-content: center; }
@@ -361,8 +361,8 @@
       .step-row { grid-template-columns: 1fr; gap: 28px; direction: ltr; margin-bottom: 64px; }
       .step-row.flip { direction: ltr; }
       .step-copy { order: 1; }
-      .step-visual { order: 2; }
-      .step-phone { height: 280px; }
+      .step-visual { order: 2; overflow: hidden; }
+      .step-phone { height: 260px; margin-bottom: -50px; }
       .step-collage { height: 260px; }
       .hiw-head { padding: 0 24px; margin-bottom: 40px; }
     }
@@ -393,7 +393,7 @@
 
     @media (max-width: 640px) {
       #bridge { padding: 72px 24px; }
-      .bridge-lead { font-size: 1.05rem; }
+      .bridge-lead { font-size: 0.92rem; }
     }
 
     /* ─── Testimonials ─── */
@@ -790,7 +790,7 @@
     <div class="cta-block">
       <div class="cta-block-inner">
         <h2>Make a little more room<br>for connection.</h2>
-        <p class="cta-sub">Free. No app store required.</p>
+        <p class="cta-sub">Free.<br>No app store required.</p>
         <a class="cta-big-btn" href="https://app.spaceapp.me" target="_blank" rel="noopener">Get Space</a>
         <div class="cta-screens">
           <div class="cta-phone-side">
