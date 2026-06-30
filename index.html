@@ -361,8 +361,8 @@
       .step-row { grid-template-columns: 1fr; gap: 16px; direction: ltr; margin-bottom: 32px; padding: 0 20px; }
       .step-row.flip { direction: ltr; }
       .step-copy { order: 1; }
-      .step-visual { order: 2; }
-      .step-phone { width: min(56vw, 220px); height: auto; clip-path: inset(0 0 22% 0); }
+      .step-visual { order: 2; overflow: hidden; max-height: 340px; }
+      .step-phone { width: min(56vw, 220px); height: auto; }
       .step-collage { height: 220px; }
       .hiw-head { padding: 0 24px; margin-bottom: 40px; }
       .step-body p { font-size: 0.88rem; }
