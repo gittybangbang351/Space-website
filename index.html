@@ -11,7 +11,7 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
     :root {
       --cream:      #fcf6ec;
@@ -219,7 +219,7 @@
       .hero-ctas { justify-content: center; }
       .hero-trust { gap: 6px 12px; justify-content: center; }
       .hero-visual { margin-bottom: -300px; }
-      .hero-phone-img { height: min(100vw, 600px); width: auto; }
+      .hero-phone-img { height: min(100vw, 600px); width: auto; filter: none; }
     }
 
     /* ─── Problem ─── */
@@ -515,12 +515,12 @@
         pointer-events: none;
       }
       .cta-block h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
-      .cta-screens { gap: 0; align-items: flex-end; }
-      .cta-screens .cta-phone-side:first-child { margin-right: -90px; z-index: 0; }
-      .cta-screens .cta-phone-side:last-child  { margin-left: -90px;  z-index: 0; }
+      .cta-screens { gap: 0; align-items: flex-end; padding: 0; }
+      .cta-screens .cta-phone-side:first-child { margin-right: -28px; z-index: 1; }
+      .cta-screens .cta-phone-side:last-child  { margin-left: -28px;  z-index: 1; }
       .cta-phone-main { z-index: 2; position: relative; }
-      .phone-img-lg { height: min(68vw, 420px); }
-      .phone-img-sm { height: min(52vw, 320px); opacity: 0.75; }
+      .phone-img-lg { height: min(60vw, 370px); }
+      .phone-img-sm { height: min(44vw, 270px); opacity: 0.88; }
     }
 
     /* ─── Support ─── */
