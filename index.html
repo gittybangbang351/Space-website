@@ -357,19 +357,14 @@
     .collage-cell:nth-child(2) img { object-position: center 40%; }
     .collage-cell:nth-child(4) img { object-position: center 40%; }
 
-    @media (max-width: 800px) {
-      .step-row { grid-template-columns: 1fr; gap: 28px; direction: ltr; margin-bottom: 64px; }
+    @media (max-width: 640px) {
+      .step-row { grid-template-columns: 1fr; gap: 28px; direction: ltr; margin-bottom: 64px; padding: 0 20px; }
       .step-row.flip { direction: ltr; }
       .step-copy { order: 1; }
       .step-visual { order: 2; overflow: hidden; }
-      .step-phone { height: 260px; margin-bottom: -50px; }
-      .step-collage { height: 260px; }
-      .hiw-head { padding: 0 24px; margin-bottom: 40px; }
-    }
-    @media (max-width: 600px) {
-      .step-row { padding: 0 20px; }
-      .step-phone { height: 240px; }
+      .step-phone { height: 240px; margin-bottom: -50px; }
       .step-collage { height: 220px; }
+      .hiw-head { padding: 0 24px; margin-bottom: 40px; }
       .step-body p { font-size: 0.88rem; }
     }
 
