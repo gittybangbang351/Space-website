@@ -214,11 +214,12 @@
     }
     @media (max-width: 640px) {
       #hero { height: auto; min-height: 100svh; align-items: flex-start; padding-top: 80px; overflow: hidden; }
-      .hero-inner { grid-template-columns: 1fr; text-align: center; padding: 0 28px; gap: 24px; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; padding: 0 28px; gap: 20px; }
       .hero-sub { max-width: 100%; margin-left: auto; margin-right: auto; }
       .hero-ctas { justify-content: center; }
-      .hero-visual { margin-bottom: -120px; }
-      .hero-phone-img { height: min(52vw, 320px); width: auto; }
+      .hero-trust { gap: 6px 12px; justify-content: center; }
+      .hero-visual { margin-bottom: -300px; }
+      .hero-phone-img { height: min(100vw, 600px); width: auto; }
     }
 
     /* ─── Problem ─── */
@@ -369,6 +370,7 @@
       .step-row { padding: 0 20px; }
       .step-phone { height: 240px; }
       .step-collage { height: 220px; }
+      .step-body p { font-size: 0.88rem; }
     }
 
     /* ─── Bridge quote ─── */
@@ -387,6 +389,11 @@
     .bridge-lines p {
       font-size: 1rem; color: var(--text-soft);
       font-style: italic; line-height: 1.65;
+    }
+
+    @media (max-width: 640px) {
+      #bridge { padding: 72px 24px; }
+      .bridge-lead { font-size: 1.05rem; }
     }
 
     /* ─── Testimonials ─── */
@@ -508,12 +515,12 @@
         pointer-events: none;
       }
       .cta-block h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
-      .cta-screens { gap: 0; }
-      .cta-screens .cta-phone-side:first-child { margin-right: -60px; z-index: 0; }
-      .cta-screens .cta-phone-side:last-child  { margin-left: -60px;  z-index: 0; }
-      .cta-phone-main { z-index: 1; position: relative; }
-      .phone-img-lg { height: min(55vw, 340px); }
-      .phone-img-sm { height: min(38vw, 240px); }
+      .cta-screens { gap: 0; align-items: flex-end; }
+      .cta-screens .cta-phone-side:first-child { margin-right: -90px; z-index: 0; }
+      .cta-screens .cta-phone-side:last-child  { margin-left: -90px;  z-index: 0; }
+      .cta-phone-main { z-index: 2; position: relative; }
+      .phone-img-lg { height: min(68vw, 420px); }
+      .phone-img-sm { height: min(52vw, 320px); opacity: 0.75; }
     }
 
     /* ─── Support ─── */
