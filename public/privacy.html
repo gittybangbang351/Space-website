@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Space</title>
+  <meta name="description" content="What information Space collects, why, and the control you have over it." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --cream:      #fcf6ec;
+      --white:      #FFFFFF;
+      --amber:      #f5a062;
+      --amber-deep: #ff8c37;
+      --dark:       #1E140C;
+      --text:       #3d3633;
+      --text-soft:  #7f7b77;
+      --border:     rgba(88,80,76,0.1);
+      --font:       'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max:        1160px;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── Nav ─── */
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto; padding: 0 28px;
+      height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; font-weight: 800; letter-spacing: -0.03em; }
+    .nav-icon { width: 30px; height: 30px; border-radius: 8px; overflow: hidden; }
+    .nav-icon img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .btn {
+      display: inline-block; padding: 10px 22px; border-radius: 100px;
+      font-size: 0.88rem; font-weight: 700; transition: opacity 0.15s; cursor: pointer;
+      font-family: var(--font); background: var(--text); color: var(--white);
+    }
+    .btn:hover { opacity: 0.78; }
+
+    /* ─── Doc ─── */
+    .doc {
+      max-width: 760px; margin: 0 auto; padding: 64px 28px 96px;
+    }
+    .doc h1 {
+      font-size: clamp(2rem, 4.4vw, 2.8rem); font-weight: 800;
+      letter-spacing: -0.03em; line-height: 1.08; color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .eff-date { font-size: 0.92rem; color: var(--text-soft); font-weight: 600; margin-bottom: 28px; }
+    .lede { font-size: 1.08rem; color: var(--text); line-height: 1.7; margin-bottom: 8px; }
+    .rule { height: 1px; background: var(--border); border: 0; margin: 36px 0; }
+    .doc h2 {
+      font-size: clamp(1.25rem, 2.4vw, 1.5rem); font-weight: 800;
+      letter-spacing: -0.02em; color: var(--dark);
+      margin: 40px 0 14px;
+    }
+    .doc p { color: var(--text); line-height: 1.72; margin-bottom: 14px; }
+    .doc p.muted { color: var(--text-soft); }
+    .doc ul { list-style: none; margin: 0 0 16px; padding: 0; }
+    .doc ul li {
+      position: relative; padding-left: 22px; margin-bottom: 10px;
+      line-height: 1.65; color: var(--text);
+    }
+    .doc ul li::before {
+      content: ''; position: absolute; left: 4px; top: 11px;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--amber-deep);
+    }
+    .doc strong { font-weight: 700; color: var(--dark); }
+    .doc a[href^="mailto"], .doc a[href^="http"] { color: var(--amber-deep); font-weight: 600; }
+    .doc a[href^="mailto"]:hover, .doc a[href^="http"]:hover { text-decoration: underline; }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--cream);
+      padding: 32px 28px;
+    }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+      font-size: 0.85rem; color: var(--text-soft);
+    }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .footer-links a:hover { color: var(--text); }
+
+    @media (max-width: 640px) {
+      .doc { padding: 44px 24px 72px; }
+      .footer-inner { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        <div class="nav-icon"><img src="/space-icon.png" alt="Space" /></div>
+        Space
+      </a>
+      <a class="btn" href="https://app.spaceapp.me" target="_blank" rel="noopener">Try Space</a>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <h1>Privacy Policy</h1>
+    <p class="eff-date">Effective date: July 3, 2026</p>
+    <p class="lede">This policy explains what information Space collects, why, and what control you have over it. We've tried to write it in plain language rather than legalese.</p>
+
+    <hr class="rule" />
+
+    <h2>Who we are</h2>
+    <p>Space ("Space", "we", "us") is operated by Dana Glick, based in Portugal. If you have any questions about this policy or your data, contact us at <a href="mailto:hello@spaceapp.me">hello@spaceapp.me</a>.</p>
+
+    <h2>What Space is</h2>
+    <p>Space is a mobile app for signaling relational availability to a small, chosen circle of people. When you turn Space on, the people in your circle can see that you're open to connecting. Space is not a social network or a messaging app — the actual connection happens outside the app.</p>
+
+    <h2>Information we collect</h2>
+    <p>We collect only what the app needs to work:</p>
+    <p><strong>Account information.</strong> When you sign up, we collect your email address and a password. If you choose to sign in with Google, we receive basic Google account information instead — your name, email address, and profile picture. We do not receive your Google password.</p>
+    <p><strong>Profile information.</strong> Your display name, an optional phone number, an optional profile photo, your connection-type preferences (call, video, in person), and your visibility settings.</p>
+    <p><strong>Your circle and contacts.</strong> The people you add to your circle, and any tags you apply to them. To help you find people you already know who are on Space, the app can check phone numbers from contacts you select against existing Space users to look for matches. These numbers are sent to our server only to perform the match and are not stored — we keep only the connections you choose to add to your circle.</p>
+    <p><strong>Availability signals.</strong> When you turn Space on, we record the duration you chose, the connection types you enabled, which part of your circle can see it, and when it expires.</p>
+    <p><strong>Activity data.</strong> Records of notifications sent between users, and when someone in your circle taps call, video, or in person on your Space Card — along with timestamps. This is what makes the core loop work.</p>
+    <p><strong>Push notification data.</strong> If you enable notifications, we use a device push identifier (through our notification provider) so we can deliver alerts to your devices.</p>
+    <p><strong>Technical data.</strong> Standard technical information needed to host and secure the app.</p>
+
+    <h2>How we use your information</h2>
+    <p>We use your information to:</p>
+    <ul>
+      <li>Create and manage your account</li>
+      <li>Show your availability to the circle members you choose</li>
+      <li>Deliver notifications you've asked for</li>
+      <li>Let you find and connect with people you know</li>
+      <li>Keep the app secure and working properly</li>
+    </ul>
+    <p>Under the GDPR, our legal bases for processing are: <strong>performing our contract with you</strong> (running the app you signed up for), <strong>your consent</strong> (for example, push notifications and contact matching), and our <strong>legitimate interests</strong> (keeping the service secure and functioning). You can withdraw consent at any time.</p>
+    <p>We do <strong>not</strong> sell your personal data, and we do not use it for advertising.</p>
+
+    <h2>Who we share it with</h2>
+    <p>We share data only with the service providers that help us run Space. Each processes data on our behalf:</p>
+    <ul>
+      <li><strong>Supabase</strong> — database, sign-in, and file storage. Your data is hosted in the European Union (Stockholm).</li>
+      <li><strong>Google</strong> — Google Sign-In, only if you choose to sign in with Google.</li>
+      <li><strong>OneSignal</strong> — delivering push notifications.</li>
+      <li><strong>Cloudflare</strong> — hosting the app and serving it securely.</li>
+    </ul>
+    <p>We may also disclose information if required by law.</p>
+
+    <h2>Where your data is stored and international transfers</h2>
+    <p>Your core account and app data is stored in the European Union. Some of our providers (such as our notification, sign-in, and hosting providers) are based outside the EU, which means some data may be processed outside the European Economic Area. Where that happens, we rely on appropriate safeguards such as the European Commission's Standard Contractual Clauses.</p>
+
+    <h2>How long we keep your data</h2>
+    <p>We keep your information for as long as your account is active. When you delete your account, your data is permanently removed (see below). Some limited records may be retained where we're legally required to.</p>
+
+    <h2>Your rights</h2>
+    <p>If you're in the EU/EEA (or a region with similar laws), you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the personal data we hold about you</li>
+      <li><strong>Correct</strong> data that's wrong or incomplete</li>
+      <li><strong>Delete</strong> your data ("right to erasure")</li>
+      <li><strong>Port</strong> your data to another service</li>
+      <li><strong>Object to</strong> or <strong>restrict</strong> certain processing</li>
+      <li><strong>Withdraw consent</strong> at any time</li>
+    </ul>
+    <p>To exercise any of these, contact us at <a href="mailto:hello@spaceapp.me">hello@spaceapp.me</a>. You also have the right to complain to a data protection authority — in Portugal, the Comissão Nacional de Proteção de Dados (CNPD); EU users may also contact their local authority.</p>
+
+    <h2>Deleting your account</h2>
+    <p>You can delete your account and all associated data at any time in the app, under <strong>Settings → delete account</strong>. This permanently erases your profile, circle, availability history, and activity records.</p>
+
+    <h2>Security</h2>
+    <p>We take reasonable measures to protect your information, including encrypted connections and access controls. No system is perfectly secure, but we work to keep your data safe.</p>
+
+    <h2>Children</h2>
+    <p>Space is not intended for anyone under 16. We do not knowingly collect data from children under 16. If you believe a child has provided us information, contact us and we'll remove it.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we make material changes to this policy, we'll update the effective date above and, where appropriate, notify you in the app.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about your privacy or this policy? Email us at <a href="mailto:hello@spaceapp.me">hello@spaceapp.me</a>.</p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Space · Built with care in Portugal · spaceapp.me</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="https://app.spaceapp.me" target="_blank" rel="noopener">Get the app</a>
+        <a href="mailto:hello@spaceapp.me">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
