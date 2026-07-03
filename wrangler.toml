@@ -1,3 +1,6 @@
 name = "space-website"
 main = "worker.js"
 compatibility_date = "2026-06-26"
+
+[assets]
+directory = "./public"
