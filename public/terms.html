@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Space</title>
+  <meta name="description" content="The terms for using Space — what it is, how to use it, and the fine print, in plain language." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --cream:      #fcf6ec;
+      --white:      #FFFFFF;
+      --amber:      #f5a062;
+      --amber-deep: #ff8c37;
+      --dark:       #1E140C;
+      --text:       #3d3633;
+      --text-soft:  #7f7b77;
+      --border:     rgba(88,80,76,0.1);
+      --font:       'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max:        1160px;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── Nav ─── */
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto; padding: 0 28px;
+      height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; font-weight: 800; letter-spacing: -0.03em; }
+    .nav-icon { width: 30px; height: 30px; border-radius: 8px; overflow: hidden; }
+    .nav-icon img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .btn {
+      display: inline-block; padding: 10px 22px; border-radius: 100px;
+      font-size: 0.88rem; font-weight: 700; transition: opacity 0.15s; cursor: pointer;
+      font-family: var(--font); background: var(--text); color: var(--white);
+    }
+    .btn:hover { opacity: 0.78; }
+
+    /* ─── Doc ─── */
+    .doc {
+      max-width: 760px; margin: 0 auto; padding: 64px 28px 96px;
+    }
+    .doc h1 {
+      font-size: clamp(2rem, 4.4vw, 2.8rem); font-weight: 800;
+      letter-spacing: -0.03em; line-height: 1.08; color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .eff-date { font-size: 0.92rem; color: var(--text-soft); font-weight: 600; margin-bottom: 28px; }
+    .lede { font-size: 1.08rem; color: var(--text); line-height: 1.7; margin-bottom: 8px; }
+    .rule { height: 1px; background: var(--border); border: 0; margin: 36px 0; }
+    .doc h2 {
+      font-size: clamp(1.25rem, 2.4vw, 1.5rem); font-weight: 800;
+      letter-spacing: -0.02em; color: var(--dark);
+      margin: 40px 0 14px;
+    }
+    .doc p { color: var(--text); line-height: 1.72; margin-bottom: 14px; }
+    .doc p.muted { color: var(--text-soft); }
+    .doc ul { list-style: none; margin: 0 0 16px; padding: 0; }
+    .doc ul li {
+      position: relative; padding-left: 22px; margin-bottom: 10px;
+      line-height: 1.65; color: var(--text);
+    }
+    .doc ul li::before {
+      content: ''; position: absolute; left: 4px; top: 11px;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--amber-deep);
+    }
+    .doc strong { font-weight: 700; color: var(--dark); }
+    .doc a[href^="mailto"], .doc a[href^="http"], .doc a[href^="/"] { color: var(--amber-deep); font-weight: 600; }
+    .doc a[href^="mailto"]:hover, .doc a[href^="http"]:hover, .doc a[href^="/"]:hover { text-decoration: underline; }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--cream);
+      padding: 32px 28px;
+    }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+      font-size: 0.85rem; color: var(--text-soft);
+    }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .footer-links a:hover { color: var(--text); }
+
+    @media (max-width: 640px) {
+      .doc { padding: 44px 24px 72px; }
+      .footer-inner { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        <div class="nav-icon"><img src="/space-icon.png" alt="Space" /></div>
+        Space
+      </a>
+      <a class="btn" href="https://app.spaceapp.me" target="_blank" rel="noopener">Try Space</a>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <h1>Terms of Service</h1>
+    <p class="eff-date">Effective date: July 6, 2026</p>
+    <p class="lede">These terms are the agreement between you and Space. We've kept them plain rather than dense — please read them before using the app.</p>
+
+    <hr class="rule" />
+
+    <h2>Agreeing to these terms</h2>
+    <p>By using Space, you agree to these terms. If you don't agree, please don't use the app. If you're using Space, you confirm you're at least 16 years old.</p>
+
+    <h2>Who we are</h2>
+    <p>Space ("Space", "we", "us") is operated by Dana Glick, based in Portugal. Questions about these terms? Email us at <a href="mailto:hello@spaceapp.me">hello@spaceapp.me</a>.</p>
+
+    <h2>What Space is</h2>
+    <p>Space is a way to signal to a small, chosen circle that you have space to connect — like leaving a porch light on. When you turn Space on, the people in your circle can see you're open.</p>
+
+    <h2>What Space isn't</h2>
+    <p>Space is not a messaging app, a social network, or a way to arrange or guarantee that any connection happens. The actual connecting happens outside the app, between you and the people you choose. We don't monitor, host, or take part in those conversations, and we're not responsible for what happens in them.</p>
+
+    <h2>Your account</h2>
+    <p>You need an account to use Space. You're responsible for keeping your login details safe and for what happens under your account. Give us accurate information when you sign up, and keep it current. If you think someone else has access to your account, let us know.</p>
+
+    <h2>Using Space well</h2>
+    <p>Space works because it's low-pressure and built on trust. When you use it, you agree not to:</p>
+    <ul>
+      <li>use it to harass, threaten, or harm anyone</li>
+      <li>add people to your circle who haven't agreed to connect with you, or use contact matching to reach people who don't want to hear from you</li>
+      <li>impersonate someone else or misrepresent who you are</li>
+      <li>try to break, overload, reverse-engineer, or get around the security of the app</li>
+      <li>use Space to break the law, or for anything it clearly isn't meant for</li>
+    </ul>
+    <p>If you use Space in a way that harms other people or the service, we may limit or close your account.</p>
+
+    <h2>Your circle and your data</h2>
+    <p>You decide who's in your circle and what you share. You can remove someone from your circle at any time — removals are quiet, with no notification to the other person, and once removed you'll no longer see each other's availability. Be considerate with other people's information — the contacts you add, and anything you learn through Space, belong to real people who trusted you with it. How we handle your personal data is covered in our <a href="/privacy">Privacy Policy</a>, which is part of these terms.</p>
+
+    <h2>The app is provided "as is"</h2>
+    <p>We work to keep Space running well, but we can't promise it will always be available, uninterrupted, or error-free. Space is provided as it is, without warranties of any kind. Availability signals may occasionally be delayed or missed, and we don't guarantee that any notification will be delivered. Nothing in Space is a substitute for reaching someone directly in an emergency.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>To the extent the law allows, Space and its operator aren't liable for indirect or consequential losses, or for anything that happens in the connections you make through the app — those are between you and the people you connect with. Nothing in these terms limits rights you have as a consumer that can't be limited by law, or liability that can't legally be excluded.</p>
+
+    <h2>Ending things</h2>
+    <p>You can stop using Space and delete your account at any time, in the app under <strong>Settings → delete account</strong>. We may suspend or close your account if you break these terms or use Space in a way that puts other people or the service at risk. If your account ends, the sections of these terms that should reasonably continue (like the disclaimers above) still apply.</p>
+
+    <h2>Changes to Space and to these terms</h2>
+    <p>Space will change over time — we may add, remove, or adjust features. We may also update these terms; if we make material changes, we'll update the effective date above and, where appropriate, let you know in the app. If you keep using Space after a change, that means you accept the updated terms.</p>
+
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws of Portugal. If you're a consumer, you're still protected by the mandatory laws of the country you live in, and you may be able to bring a claim there.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms? Email us at <a href="mailto:hello@spaceapp.me">hello@spaceapp.me</a>.</p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Space · Built with care in Portugal · spaceapp.me</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/privacy">Privacy</a>
+        <a href="https://app.spaceapp.me" target="_blank" rel="noopener">Get the app</a>
+        <a href="mailto:hello@spaceapp.me">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
