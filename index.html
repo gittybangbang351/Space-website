@@ -446,6 +446,29 @@
       .qdot.on { background: var(--text); width: 22px; border-radius: 4px; }
     }
 
+    /* ─── Our story teaser ─── */
+    #story-teaser { padding: 84px 28px; background: var(--white); border-top: 1px solid var(--border); }
+    .story-teaser-inner { max-width: 660px; margin: 0 auto; text-align: center; }
+    .story-teaser-eyebrow {
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--amber-deep); margin-bottom: 16px;
+    }
+    .story-teaser-inner h2 {
+      font-size: clamp(1.5rem, 3.4vw, 2.2rem); font-weight: 800;
+      letter-spacing: -0.03em; line-height: 1.14; color: var(--dark);
+      margin-bottom: 18px; text-wrap: balance;
+    }
+    .story-teaser-inner p {
+      font-size: 1.06rem; color: var(--text-soft); line-height: 1.7;
+      max-width: 540px; margin: 0 auto 26px; text-wrap: pretty;
+    }
+    .story-teaser-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.98rem; font-weight: 700; color: var(--amber-deep);
+    }
+    .story-teaser-link .arr { transition: transform 0.18s; }
+    .story-teaser-link:hover .arr { transform: translateX(4px); }
+
     /* ─── FAQ ─── */
     #faq { padding: 80px 28px; background: var(--white); }
     #faq h2 { text-align: center; margin-bottom: 48px; font-size: clamp(1.4rem, 3vw, 2.1rem); }
@@ -600,10 +623,12 @@
       </a>
       <div class="nav-dropdown" id="navDropdown">
         <a href="#how-it-works">How it works</a>
+        <a href="/story">Our story</a>
         <a href="#faq">FAQ</a>
       </div>
       <ul class="nav-links">
         <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="/story">Our story</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <div class="nav-right">
@@ -762,6 +787,16 @@
     </div>
   </section>
 
+  <!-- ─── Our story teaser ─── -->
+  <section id="story-teaser">
+    <div class="story-teaser-inner">
+      <p class="story-teaser-eyebrow">Our story</p>
+      <h2>The people who matter don't drift on purpose.</h2>
+      <p>The relationships we lose are rarely the ones we stopped caring about. They're the ones we never quite got around to. That's why we built Space.</p>
+      <a class="story-teaser-link" href="/story">Read our story <span class="arr">&rarr;</span></a>
+    </div>
+  </section>
+
   <!-- ─── FAQ ─── -->
   <section id="faq">
     <div class="container">
@@ -829,6 +864,7 @@
         <ul>
           <li><a href="https://app.spaceapp.me" target="_blank" rel="noopener">Get the app</a></li>
           <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="/story">Our story</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
