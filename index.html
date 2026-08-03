@@ -612,6 +612,45 @@
     .footer-social a { font-size: 0.8rem; color: var(--text-muted); transition: color 0.15s; }
     .footer-social a:hover { color: var(--cream); }
   </style>
+
+  <!--
+    Old-origin PWA catch.
+
+    Space used to be served from this origin. The app manifest has carried
+    start_url "/" since 29 May 2026, and a PWA always launches at start_url,
+    so an install made back then still opens spaceapp.me/ — which now renders
+    this marketing page with no browser chrome and no route into the app.
+    Nothing signals a fault: it is a normal 200, not an error.
+
+    Web push subscriptions are origin-scoped, so those installs can never
+    receive a Space notification regardless of what the person does inside
+    them. Reinstalling from app.spaceapp.me is the only fix.
+
+    Only an installed launch matches display-mode: standalone (or
+    navigator.standalone on iOS). An ordinary browser visitor never does, so
+    the site is untouched for everyone else.
+
+    Homepage only, deliberately. These launches always land on "/", so the
+    worker's 404 page is unreachable for them and does not need this.
+
+    The ?from= param exists so these launches are countable on the app side.
+    They are currently invisible — indistinguishable from ordinary marketing
+    traffic at "/". See OLD-ORIGIN-PWA in ops/build-queue.md.
+  -->
+  <script>
+    (function () {
+      try {
+        var standalone =
+          (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+          window.navigator.standalone === true;
+        if (standalone) {
+          window.location.replace('https://app.spaceapp.me/reinstall?from=old-origin');
+        }
+      } catch (e) {
+        /* never let this break the page for a normal visitor */
+      }
+    })();
+  </script>
 </head>
 <body>
 
